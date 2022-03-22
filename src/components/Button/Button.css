@@ -1,0 +1,23 @@
+.btn-container{
+    height: 103px;
+    display: flex;
+    justify-content: center;
+}
+
+.add-book-btn{
+    height: 57px;
+    width: 200px;
+    color: #39ff14;
+    margin-top: 22px;
+    background-color: #000;
+    font-size: 17px;
+    font-weight: 400;
+    border-radius: 10px;
+    border: #39ff14 1px solid;
+}
+
+.add-book-btn:hover{
+    color: black;
+    background: #39ff14;
+    box-shadow: 0 0 50px #39ff14;
+}

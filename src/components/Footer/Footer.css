@@ -1,0 +1,24 @@
+.footer-wrapper{
+    height: auto;
+}
+
+.footer-item-container p{
+    color: rgb(0, 0, 0);
+    margin: 0px;
+}
+
+.footer-item-container{
+    width: 279px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.github-logo{
+    cursor: pointer;
+    filter: invert(0%) sepia(7%) saturate(7472%) hue-rotate(61deg) brightness(100%) contrast(106%);
+}
+
+.github-logo:hover{
+    box-shadow: 0 0 50px #072cd1;
+}

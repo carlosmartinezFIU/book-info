@@ -1,12 +1,12 @@
 .form-container{
     display: flex;
-    width: 820px;
+    width: 445px;
     margin: auto;
     justify-content: space-between;
 }
 
 .author-title-container{
-    width: 500px;
+    width: 217px;
     display: flex;
     justify-content: space-between;
 }
@@ -19,32 +19,18 @@
     margin-right: 16px;
 }
 
-.form-container input{
+.submit-form{
     background: transparent;
     border: 1.5px solid #1a1d1a;
     border-radius: 10px;
     color: #1a1d1a;
+    width: 103px;
+    height: 33px;
+    margin-top: 22px;
 }
 
-.form-container button{
-    width: 35px;
-    height: 32px;
-    margin-top: 21px;
-    font-size: 21px;
-    background: transparent;
-    color: #39ff14;
-    border: 1px solid #39ff14;
-}
-
-.submit-form{
-    background: transparent;
-    border: 1px solid #39ff14;
-    border-radius: 10px;
-    color: #39ff14;
-    width: 52px;
-    height: 42px;
-    margin-top: 13px;
-  
+.search-input-bar{
+    
 }
 
 

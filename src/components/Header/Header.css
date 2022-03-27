@@ -8,17 +8,18 @@
     height: 100%;
     object-fit: cover;
     overflow: hidden;
+    object-position: top;
 }
 
 .header-wrapper p{
     position: relative;
     top: -301px;
     margin: 0px;
-    width: 364px;
+    width: 400px;
     height: auto;
-    left: 600px;
+    left: 737px;
     font-size: 50px;
-    color: #fff;
+    color: #000;
     font-weight: 700;
 }
 

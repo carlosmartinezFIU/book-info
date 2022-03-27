@@ -1,0 +1,48 @@
+.shelfed-books-container{
+    width: 569px;
+    height: 322px;
+    margin-bottom: 50px;
+    position: relative;
+    background: #fff;
+    text-align: center;
+}
+
+.close-btn{
+    position: absolute;
+    right: 12px;
+    top: 11px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 550px){
+    .shelfed-books-container{
+        width: 365px;
+        border: 1px red solid;
+        position: relative;
+        text-align: center;
+        height: 300px;
+    }
+
+    .image-container{
+        left: -107px;
+    }
+
+    .close-btn{
+        position: absolute;
+        right: 12px;
+        top: 11px;
+    }
+
+}

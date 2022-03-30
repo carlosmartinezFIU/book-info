@@ -26,23 +26,29 @@
 
 
 
+
+
 @media screen and (max-width: 550px){
     .shelfed-books-container{
-        width: 365px;
-        border: 1px red solid;
+        width: 344px;
+        border: 1px #000 solid;
         position: relative;
         text-align: center;
         height: 300px;
+        border-radius: 21px;
     }
 
     .image-container{
-        left: -107px;
+        left: -108px;
     }
 
     .close-btn{
         position: absolute;
         right: 12px;
         top: 11px;
+        cursor: pointer;
     }
+
+
 
 }

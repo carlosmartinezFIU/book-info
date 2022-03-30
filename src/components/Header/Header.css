@@ -1,6 +1,6 @@
 .header-wrapper{
     width: auto;
-    height: 500px;  
+    height: 322px;  
 }
 
 .header-wrapper img{
@@ -13,11 +13,10 @@
 
 .header-wrapper p{
     position: relative;
-    top: -301px;
-    margin: 0px;
+    top: -56%;
+    margin: auto;
     width: 400px;
     height: auto;
-    left: 737px;
     font-size: 50px;
     color: #000;
     font-weight: 700;

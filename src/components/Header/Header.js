@@ -1,13 +1,16 @@
-import bookImage from '../../assets/line-book.jpg';
+import bookImage from '../../assets/darkCover.jpg';
+import Form from '../Form/Form';
 import Navbar from '../Navbar/Navbar';
 import './Header.css';
 
-const Header = () => {
+const Header = ({ onAdd }) => {
   return (
     <div className='header-wrapper'>
-      <Navbar />
+     
+      <Navbar  />
         <img src={bookImage} alt="books"/>
-        <p>My Book Tracker</p>
+        <Form onAdd={ onAdd } />
+        
     </div>
   )
 }

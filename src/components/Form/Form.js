@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { BiSearch } from 'react-icons/bi';
 import './Form.css';
 
 const Form = ({ onAdd }) => {
@@ -20,14 +21,16 @@ const Form = ({ onAdd }) => {
 
   return (
   <>
-    <form className="form-container"  onSubmit={addingBook} >
+    <form className="form-container"  >
         <div className='author-title-container'>
             <div className='title-container'>
-                <p>Search</p>
                 <input className='search-input-bar' placeholder="Add Title" type='text' value={title} onChange={(e) => setTitle(e.target.value)}/>
             </div>
         </div>
-        <input className='submit-form' value="Submit" type="submit"/>
+        
+        <BiSearch type='submit' className='search-icon' onClick={addingBook}/>
+        
+        
     </form>
     </>
   )

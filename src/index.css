@@ -24,7 +24,22 @@ body{
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin-top: 43px;
-    min-height: 121px;
+    min-height: 372px;
+
+    background: gray;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    padding-top: 85px;
+}
+
+.book-wrapper-title{
+    height: 30px;
+    position: relative;
+    top: 100px;
+    margin: auto;
+    width: 108px;
+    font-size: 31px;
+  
 }
 
 .book-item-container{
@@ -38,6 +53,7 @@ body{
     margin-bottom: 50px;
     position: relative;
     background: #fff;
+    border: 1px #000 solid;
 }
 
 .image-container{
@@ -107,14 +123,22 @@ body{
 
 
 @media screen and (max-width: 550px){
+    .book-container-One{
+        margin: 3rem 0.5rem 0 0.5rem;
+        padding-top: 73px;
+        min-height: 247px;
+    }
+
     .book-item-container{
-        width: 365px;
+        width: 344px;
+        border-radius: 21px;
     }
 
     .image-container{
         left: -108px;
         width: 128px;
         height: 206px;
+        border-top-left-radius: 20px;
     }
 
     .title{
@@ -141,6 +165,8 @@ body{
         left: -108px;
         top: 0px;
     }
+
+    
 
 
     /****************** Shelf Responsive **********************/

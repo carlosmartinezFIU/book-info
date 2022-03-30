@@ -6,34 +6,16 @@ import Footer from "./components/Footer/Footer";
 import { useState } from "react";
 import axios from 'axios';
 import Shelf from "./components/Shelf/Shelf";
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import { AiOutlinePlus } from 'react-icons/ai';
 import useLocalStorage from "./components/Hooks/useLocalStorage";
 
 function App() {
-  //Hook to hide/show Add Book Button
-  const [showAddBook, setShowAddBook] = useState(false);
-
   //Hook to store api objects
   const [books, setBook] = useState([]);
 
   const [stored, setStored ] = useLocalStorage(['book']);
 
-
-
-
-
- //Fetching api from Google Books API using Axios
- //Parameter comes from Forum Component
-  const getApi = (newBook) =>{
-      axios.get(`https://www.googleapis.com/books/v1/volumes?q=${newBook.title}&maxResults=40`)
-      .then(response =>{
-          setBook([...response.data.items]);
-
-      }).catch(error => {
-          alert("Error");
-      })
-  }
 
 /*
   Function parameter: book id
@@ -54,13 +36,27 @@ function App() {
 
 
 
+   //Fetching api from Google Books API using Axios
+ //Parameter comes from Forum Component
+ const getApi = (newBook) =>{
+  axios.get(`https://www.googleapis.com/books/v1/volumes?q=${newBook.title}&maxResults=40`)
+  .then(response =>{
+      setBook([...response.data.items]);
+
+  }).catch(error => {
+      alert("Error");
+  })
+}
+
+
+
 
 
   /*
      Mapping through the returned function books to output certain 
      including : images, title, author, text-snippet.
   */
-  const results = books.map((bookItem) => {
+    const results = books.map((bookItem) => {
     //imageOfBook verifies if there is an image to return
     let imageOfBook = bookItem.volumeInfo.imageLinks&&bookItem.volumeInfo.imageLinks.smallThumbnail;
 
@@ -87,16 +83,18 @@ function App() {
     <Router>
 
             <div className="App">
-              <Header />
-              <Button btnClassname="add-book-btn" onAdd={() => setShowAddBook(!showAddBook)}  btnName="Add Book" formBool={showAddBook}/>
-              {showAddBook && <Form onAdd={getApi} /> }
-              <div className="book-container-One">
-        <Routes>
-              <Route path="/" element={ results } />
-              <Route path="/shelf" element={<Shelf info={stored}  aaBB={aaBB} />} />
-        </Routes>
+              <Header onAdd={getApi}/>
+              <div className="book-container-Wrapper">
+                      <h3 className="book-wrapper-title">Books</h3>
+                      <div className="book-container-One">
+                 <Routes>
+                    <Route path="/" element={ results } />
+                    <Route path="/shelf" element={<Shelf info={stored}  aaBB={aaBB} />} />
+                 </Routes>
+                    </div>
+                    
               </div>
-              <Footer />
+                  <Footer />
             </div>
         
     </Router>
@@ -105,3 +103,7 @@ function App() {
 
 
 export default App;
+
+
+// <Button btnClassname="add-book-btn" onAdd={() => setShowAddBook(!showAddBook)}  btnName="Add Book" formBool={showAddBook}/>
+// {showAddBook && <Form onAdd={getApi} /> }

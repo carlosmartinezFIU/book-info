@@ -1,6 +1,8 @@
 .footer-wrapper{
     height: auto;
-    margin-top: 125px;
+    bottom: 0px;
+    width: 100%;
+    position: relative;
 }
 
 .footer-item-container p{

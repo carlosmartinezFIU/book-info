@@ -18,8 +18,6 @@ const Shelf = ({ info, aaBB }) => {
 
   return (
     <>
-    <h2>Shelf</h2>
-
    { storeData != null ? storeData.map(ele =>{
 
       //imageOfBook verifies if there is an image to return
